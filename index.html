@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GemsCollector</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<body>
+
+
+<!-- Create a header/jumbotron with a name to display what game your user is playing. -->
+<h1>GemsCollector!</h1>
+
+<!-- You will need to create a section that will explain the game -->
+    <div class="game-instructions">
+        <p>You will be given a random number at the start of the game.</p>
+        <p>There are four gems at the bottom of the page, each with a random value.</p>
+        <p>The point of the game is to learn the numbers of each gem by clicking on them.
+            each gem has a set value for the game, however, as each game goes on, the value
+            of the gem will change.
+        </p>
+        <p>Start by clicking on the gem, it will tell you its value.</p>
+        <p>The random number below will be your target number to get to. If you can get to the
+            random number spot on, YOU WIN!! Be careful, if you go over that score, you lost.
+        </p>
+        <p>Good Luck!!</p>
+    </div>
+<!-- Display the random number -->
+    <p id="random-number"></p>
+
+<!-- Display the wins and losses -->
+    <div class="info-box-score">
+        <p id="result"></p>
+        <p id="wins"></p>
+        <p id="losses"></p>
+    </div>
+
+<!-- grab 4 cristol pictures (this will be the button the user clicks on to jump the score) -->
+    <div class="gem-images">
+        <img id="red-gem" src="./assets/images/red-gem.jpg" alt="red gem" height="60px" width="60px"/>
+        <img id="blue-gem" src="./assets/images/blue-gem.png" alt="blue gem" height="60px" width="60px"/>
+        <img id="yellow-gem" src="./assets/images/yellow-gem.jpg" alt="yellow gem" height="60px" width="60px"/>
+        <img id="green-gem" src="./assets/images/green-gem.jpg" alt="green gem" height="60px" width="60px"./>
+    </div>
+
+<!-- Tell the user what their score is in text -->
+    <h3>Your total score is:</h3>        
+
+<!-- display the users score as a string -->
+        <p id="current-score"></p>
+  
+
+</body>
+</html>
