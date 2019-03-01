@@ -6,10 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GemsCollector</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- <script src="./assets/javascript/game.js"> type="text/javascript"</script> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
 </head>
 <body>
 
@@ -17,24 +20,27 @@
 
     <div class="game-instructions">
         <p>You will be given a random number at the start of the game.</p>
+        <br>
         <p>There are four gems at the bottom of the page, each with a random value.</p>
+        <br>
         <p>The point of the game is to learn the numbers of each gem by clicking on them.
             each gem has a set value for the game, however, as each game goes on, the value
             of the gem will change.
         </p>
+        <br>
         <p>Start by clicking on the gem, it will tell you its value.</p>
         <p>The random number below will be your target number to get to. If you can get to the
             random number spot on, YOU WIN!! Be careful, if you go over that score, you lost.
         </p>
+        <br>
         <p>Good Luck!!</p>
     </div>
 
-    <p id="random-number"></p>
+    <h4>CLICK ON ANY GEM TO START, OR TO CONTINUE AFTER YOU WIN  OR  LOOSE</h4>
 
-    <div class="info-box-score">
-        <p id="result"></p>
-        <p id="wins"></p>
-        <p id="losses"></p>
+    <div class="random-number-container">
+        <h2>Random Number</h2>
+        <p id="random-number"></p>
     </div>
 
     <div class="gem-images">
@@ -44,72 +50,21 @@
         <img id="green-gem" src="./assets/images/green-gem.jpg" alt="green gem"/>
     </div>
 
-    
-    <h3>Your total score is:</h3>        
-
+    <div class="current-score-container">
+        <h3>Your total score is:</h3> 
         <p id="current-score"></p>
+    </div>
+
+    <div class="info-box-score">
+        <p id="result">result</p>
+        <p id="wins">Wins</p>
+        <p id="losses">Losses</p>
+    </div>
   
 
                                                      <!-- Script -->
                                             <!-- Add script tag and jquery cdn -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript">
-
-
-// this may require a function which will restart the game each time
-
-
-//random target number between 19 - 120 that will be displated at start
-var targetNumber = Math.floor(Math.random() * 100) + 19;
-    // This will display the random number
-    $("#random-number").text(targetNumber);
-
-// Create a section that will display wins, losses and "You Won" or "You Lost"
-
-
-
-
-// Create images that can be click on to add a value
-// Each crystal should have a random hidden value between 1 - 12
-var redGemRandomNumber = Math.floor(Math.random() * 12) + 1;
-var blueGemRandomNumber = Math.floor(Math.random() * 12) + 1;
-var yellowGemRandomNumber = Math.floor(Math.random() * 12) + 1;
-var greenGemRandomNumber = Math.floor(Math.random() * 12) + 1;
-
-
-
-
-// pull a random number and store it to a gem 1-12
-$("#red-gem").on("click", function() {
-    $("#current-score").text(redGemRandomNumber)
-   
-});
-
-$("#blue-gem").on("click", function() {
-    $("#current-score").text(blueGemRandomNumber)
-
-});
-$("#yellow-gem").on("click", function() {
-    $("#current-score").text(yellowGemRandomNumber)
-
-});
-$("#green-gem").on("click", function() {
-    $("#current-score").text(greenGemRandomNumber)
-
-});
-
-
-
-    // IF/ELSE statment that will tell us if the user won or lost
-
-        // IF user score === targetNumber, the user Wins and we add to the "win" score
-
-        //Else the user looses and we add to the "losses" score
-
-        // We also want to display a small win note by the wins and losses area
-
-
-
-</script>
+<script type="text/javascript" src="./assets/javascript/game.js"></script>
 </body>
 </html>

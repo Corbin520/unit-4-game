@@ -1,85 +1,133 @@
 
 body {
-    width: 450px;
-    background-image: url("../images/whitepaint.jpg");
+    width: 800px;
+    background-image: url("../images/bricks.jpg");
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1 {
+    font-family: 'Acme', sans-serif;
     margin: 8px;
     padding: 10px;
-    width: 320px;
-    font-size: 45px;
-    color: white;
-    background-color: orange;
+    width: 800px;
+    font-size: 55px;
+    text-align: center;
+    color: red;
     font-weight: bold;
 }
 
 .game-instructions {
+    font-family: 'Gloria Hallelujah', cursive;
+    width: 800px;
     margin: 8px;
     padding: 10px;
     font-size: 20px;
-    color: white;
-    background-color: tan;
+    color: black;
+}
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+.random-number-container {
+    text-align: center;
+    font-size: 20px;
+}
+
+#wins, #losses, #result {
+    font-family: 'Orbitron', sans-serif;
 }
 
 #random-number{
     font-size: 50px;
+    text-align: center;
     margin: 8px;
     color: black;
-    background: green;
-    width: 200px;
-    padding: 30px 50px;
+    width: 800px;
 }
 
-/* #current-score {
-    float: left;
+.info-box-score {
+    text-align: center;
     margin: 8px;
-    background: lightblue;
-    padding: 50px 20px;
-    width: 120px;
+    padding: 10px;
+    font-size: 45px;
+    color: black;
+    font-weight: bold;
+    border: solid;
+}
 
-} */
+#result{
+    text-align: center;
+    font-size: 16px;
+    margin: 8px;
+    color: black;
+    width: 120px;
+    padding: 5px;
+}
+
+#wins {
+    text-align: center;
+    font-size: 16px;
+    margin: 8px;
+    color: black;
+    width: 120px;
+    padding: 5px;
+}
+
+#losses {
+    text-align: center;
+    font-size: 16px;
+    margin: 8px;
+    color: black;
+    width: 120px;
+    padding: 5px;
+}
 
 .gem-images {
-    margin: 8px;
-
+    margin: 10px;
+    width: 800px;
 }
 
-#red-gem {
-    width: 100px;
-    height: 80px;
-}
-
-#blue-gem{
-    width: 100px;
-    height: 80px;
-    background: white;
-}
-
-#yellow-gem{
-    width: 100px;
-    height: 80px;
-}
-
-#green-gem{
-    width: 100px;
-    height: 80px;
+#red-gem, #blue-gem,
+#yellow-gem, #green-gem {
+    width: 172px;
+    height: 100px;
+    border: solid;
+    padding-left: auto;
+    padding-right: auto;
+    border-radius: 25px;
 }
 
 h3 {
-    width: 200px;
-    font-size: 20px;
-    color: white;
-    background: teal;
-    padding: 8px;
-    margin: 8px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    color: red;
+}
+
+#blue-gem{
+    background: white;
+}
+
+.current-score-container {
+    text-align: center;
 }
 
 #current-score {
-    width: 200px;
-    color: white;
-    background: teal;
-    padding: 30px 50px;
-    margin: 8px;
+    padding-top: 10px;
+    text-align: center;
+    color: black;
     font-size: 50px;
+}
+h4 {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    color: red;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 25px;
 }
