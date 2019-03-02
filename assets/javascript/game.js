@@ -18,9 +18,10 @@ var wins = 0;
 var losses = 0;
 
 // Storing the ID from HTML in JS
-var resultText = document.getElementById("result")
-var winsText = document.getElementById("wins")
-var lossesText = document.getElementById("losses")
+var resultText = document.getElementById("result");
+var winsText = document.getElementById("wins");
+var lossesText = document.getElementById("losses");
+var currentScoreText = document.getElementById("current-score");
 
 
 // Start game and reset game function
@@ -32,10 +33,16 @@ function startGame() {
     blueGemRandomNumber = Math.floor(Math.random() * 12) + 1;
     yellowGemRandomNumber = Math.floor(Math.random() * 12) + 1;
     greenGemRandomNumber = Math.floor(Math.random() * 12) + 1;
+    currentScoreText.textContent = "0";
     wins;
     losses;
 
 }
+
+winsText.textContent = "wins: 0";
+lossesText.textContent = "Losses: 0";
+currentScoreText.textContent = "0";
+
 
 
 // Start of game
@@ -47,14 +54,12 @@ $("#red-gem").on("click", function () {
 
     $("#current-score").text(currentScore)
     if (currentScore === targetNumber) {
-        currentScore = 0;
         wins++;
         alert("you win");
         startGame();
 
     } else if (currentScore >= targetNumber) {
         alert("You lose!!");
-        currentScore = 0;
         losses++;
         startGame();
     }
@@ -93,13 +98,11 @@ $("#yellow-gem").on("click", function () {
     $("#current-score").text(currentScore)
     if (currentScore === targetNumber) {
         alert("You Win!");
-        currentScore = 0;
         wins++;
         startGame();
 
     } else if (currentScore >= targetNumber) {
         alert("You lose!!");
-        currentScore = 0;
         losses++;
         startGame();
     }
@@ -115,13 +118,11 @@ $("#green-gem").on("click", function () {
     $("#current-score").text(currentScore)
     if (currentScore === targetNumber) {
         alert("you win");
-        currentScore = 0;
         wins++;
         startGame();
 
     } else if (currentScore >= targetNumber) {
         alert("You lose!!");
-        currentScore = 0;
         losses++;
         startGame();
       }

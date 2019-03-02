@@ -18,7 +18,7 @@ h1 {
 }
 
 .game-instructions {
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     width: 800px;
     margin: 8px;
     padding: 10px;
@@ -38,55 +38,21 @@ h2 {
 
 #wins, #losses, #result {
     font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: red;
 }
 
 #random-number{
     font-size: 50px;
-    text-align: center;
     margin: 8px;
     color: black;
     width: 800px;
 }
 
-.info-box-score {
-    text-align: center;
-    margin: 8px;
-    padding: 10px;
-    font-size: 45px;
-    color: black;
-    font-weight: bold;
-    border: solid;
-}
-
-#result{
-    text-align: center;
-    font-size: 16px;
-    margin: 8px;
-    color: black;
-    width: 120px;
-    padding: 5px;
-}
-
-#wins {
-    text-align: center;
-    font-size: 16px;
-    margin: 8px;
-    color: black;
-    width: 120px;
-    padding: 5px;
-}
-
-#losses {
-    text-align: center;
-    font-size: 16px;
-    margin: 8px;
-    color: black;
-    width: 120px;
-    padding: 5px;
-}
-
 .gem-images {
-    margin: 10px;
+    margin: 0 55px;
     width: 800px;
 }
 
@@ -94,10 +60,8 @@ h2 {
 #yellow-gem, #green-gem {
     width: 172px;
     height: 100px;
-    border: solid;
-    padding-left: auto;
-    padding-right: auto;
-    border-radius: 25px;
+    border: solid 1px gray;
+    border-radius: 30px;
 }
 
 h3 {
@@ -107,6 +71,7 @@ h3 {
     text-align: center;
     text-decoration: underline;
     color: red;
+    padding-top: 30px;
 }
 
 #blue-gem{
