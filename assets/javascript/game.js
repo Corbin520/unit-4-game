@@ -1,4 +1,11 @@
 
+// make score clear before next game after win
+
+// push wins and losses to text as well as a win or loss based on an if else
+
+// build a function that will simple your if else gem statements
+
+
 
 // Variables for
 var targetNumber = 0;
@@ -28,12 +35,11 @@ function startGame() {
     wins;
     losses;
 
-    winsText.textContent = "wins: " + wins;
 }
 
 
 // Start of game
-startGame();
+startGame(); {
 
 // Red Gem
 $("#red-gem").on("click", function () {
@@ -42,14 +48,19 @@ $("#red-gem").on("click", function () {
     $("#current-score").text(currentScore)
     if (currentScore === targetNumber) {
         currentScore = 0;
+        wins++;
         alert("you win");
         startGame();
 
     } else if (currentScore >= targetNumber) {
         alert("You lose!!");
         currentScore = 0;
+        losses++;
         startGame();
     }
+    resultText.text = "Results: ";
+    winsText.textContent = "wins: " + wins;
+    lossesText.textContent = "Losses: " + losses;
 });
 
 
@@ -61,13 +72,18 @@ $("#blue-gem").on("click", function () {
     if (currentScore === targetNumber) {
         alert("you win");
         currentScore = 0;
+        wins++;
         startGame();
 
     } else if (currentScore >= targetNumber) {
         alert("You lose!!");
         currentScore = 0;
+        losses++;
         startGame();
     }
+    resultText.text = "Results: ";
+    winsText.textContent = "wins: " + wins;
+    lossesText.textContent = "Losses: " + losses;
 });
 
 // Yellow Gem
@@ -78,13 +94,18 @@ $("#yellow-gem").on("click", function () {
     if (currentScore === targetNumber) {
         alert("You Win!");
         currentScore = 0;
+        wins++;
         startGame();
 
     } else if (currentScore >= targetNumber) {
         alert("You lose!!");
         currentScore = 0;
+        losses++;
         startGame();
     }
+    resultText.text = "Results: ";
+    winsText.textContent = "wins: " + wins;
+    lossesText.textContent = "Losses: " + losses;
 });
 
 // Green Gem
@@ -95,14 +116,19 @@ $("#green-gem").on("click", function () {
     if (currentScore === targetNumber) {
         alert("you win");
         currentScore = 0;
+        wins++;
         startGame();
 
     } else if (currentScore >= targetNumber) {
         alert("You lose!!");
         currentScore = 0;
+        losses++;
         startGame();
       }
-
+    resultText.text = "Results: ";
+    winsText.textContent = "wins: " + wins;
+    lossesText.textContent = "Losses: " + losses;
 });
 
 
+}
