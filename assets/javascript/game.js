@@ -1,11 +1,4 @@
 
-// make score clear before next game after win
-
-// push wins and losses to text as well as a win or loss based on an if else
-
-// build a function that will simple your if else gem statements
-
-
 
 // Variables for
 var targetNumber = 0;
@@ -39,6 +32,7 @@ function startGame() {
 
 }
 
+// Placeholder text
 winsText.textContent = "wins: 0";
 lossesText.textContent = "Losses: 0";
 currentScoreText.textContent = "0";
@@ -50,24 +44,29 @@ startGame(); {
 
 // Red Gem
 $("#red-gem").on("click", function () {
-    currentScore = currentScore + redGemRandomNumber;
 
+    // keeps tract of running score + the gem value on click
+    currentScore = currentScore + redGemRandomNumber;
     $("#current-score").text(currentScore)
+
+    //if the target number is = to currentScore, add to wins, alert and restart game
     if (currentScore === targetNumber) {
         wins++;
         alert("you win");
         startGame();
 
+    // if the currentScore is more than target number, add loss, alert and restart
     } else if (currentScore >= targetNumber) {
         alert("You lose!!");
         losses++;
         startGame();
     }
-    resultText.text = "Results: ";
+    // text displaying the wins, losses
     winsText.textContent = "wins: " + wins;
     lossesText.textContent = "Losses: " + losses;
 });
 
+// above code repeats for each gem
 
 // Blue Gem
 $("#blue-gem").on("click", function () {
