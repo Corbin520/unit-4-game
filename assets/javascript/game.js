@@ -51,6 +51,7 @@ $("#red-gem").on("click", function () {
 
     //if the target number is = to currentScore, add to wins, alert and restart game
     if (currentScore === targetNumber) {
+        currentScore = 0;
         wins++;
         alert("you win");
         startGame();
@@ -58,6 +59,7 @@ $("#red-gem").on("click", function () {
     // if the currentScore is more than target number, add loss, alert and restart
     } else if (currentScore >= targetNumber) {
         alert("You lose!!");
+        currentScore = 0;
         losses++;
         startGame();
     }
@@ -85,7 +87,6 @@ $("#blue-gem").on("click", function () {
         losses++;
         startGame();
     }
-    resultText.text = "Results: ";
     winsText.textContent = "wins: " + wins;
     lossesText.textContent = "Losses: " + losses;
 });
@@ -97,15 +98,16 @@ $("#yellow-gem").on("click", function () {
     $("#current-score").text(currentScore)
     if (currentScore === targetNumber) {
         alert("You Win!");
+        currentScore = 0;
         wins++;
         startGame();
 
     } else if (currentScore >= targetNumber) {
         alert("You lose!!");
+        currentScore = 0;
         losses++;
         startGame();
     }
-    resultText.text = "Results: ";
     winsText.textContent = "wins: " + wins;
     lossesText.textContent = "Losses: " + losses;
 });
@@ -117,11 +119,13 @@ $("#green-gem").on("click", function () {
     $("#current-score").text(currentScore)
     if (currentScore === targetNumber) {
         alert("you win");
+        currentScore = 0;
         wins++;
         startGame();
 
     } else if (currentScore >= targetNumber) {
         alert("You lose!!");
+        currentScore = 0;
         losses++;
         startGame();
       }
